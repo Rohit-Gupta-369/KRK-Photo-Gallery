@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css' rel='stylesheet'/>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <title>KRK PHOTO GALLERY</title>
+</head>
+<body>
+    <div class="main w-full relative h-full overflow-x-hidden">
+        <!-- navbar -->
+        <div  class="hidde cursor-pointer w-[45px] h-[45px] absolute top-16 z-10 py-2  morf flex items-center justify-center">
+            <i class="ri-arrow-right-double-line text-3xl px-1 text-[25px] transition-all rounded-[5px] opacity-50 hover:opacity-100 hover:bg-[#82d7ff43]">
+            </i>
+        </div>
+        <nav id="navbar" class="activeNav h-[calc(100vh-75px)] w-[250px] px-[5px] py-[1em] cc morf absolute z-20 mt-9">
+            <div class="px-2">
+                <ul class="flex items-center justify-between">
+                    <li ><a href="./index.html"><img class="w-[100px] " src="./assests/proj_logo.png" alt="Logo"></a></li>
+                    <li class="hidde">
+                        <i  class="ri-arrow-left-double-line text-3xl  opacity-50 hover:opacity-100 hover:bg-[#82d7ff43] rounded-lg p-1"></i>
+                    </li>
+                </ul>
+                <a href="./index.html">
+                    <ul class="flex items-center p-2 px-4 mt-5 hover:bg-[#82d7ff43]  rounded-lg transition-all gap-2 cursor-pointer">
+                        <li>
+                            <i class="ri-home-line text-2xl"></i>
+                            
+                        </li>
+                        <li>
+                            <h2 class="text-1xl font-medium">Home</h2>
+                        </li>
+                    </ul>
+                </a>
+                <details id="tabs" class="transition-all">
+                    <summary class="list-none">
+                        <ul class="images-up flex items-center p-2 px-4 hover:bg-[#82d7ff43]  rounded-lg transition-all gap-2 relative cursor-pointer">
+                        <li>
+                            <i class="ri-gallery-line text-2xl"></i>
+                        </li>
+                        <li>
+                            <h2 class="text-1xl font-medium">Images</h2>
+                        </li>
+                        <li >
+                            <i id="arrow-1" class="ri-arrow-down-s-line grow-1 text-xl absolute right-2 top-2"></i>
+                        </li>
+                        </ul>
+                    </summary>
+                    <!-- <a href="../index.html">
+                        <ul class="flex items-center p-2 pl-10  hover:bg-[#82d7ff43]  rounded-lg transition-all gap-2 ">
+                            <li>
+                                <i class="ri-image-line text-2xl"></i>
+                                
+                            </li>
+                            <li>
+                                <h2 class="text-1xl font-medium">Pokemon</h2>
+                            </li>
+                        </ul>
+                    </a>
+                    -->
+                </details>
+                <ul class="border-1 rounded-lg border  m-auto border-[#abafba] mt-2">
+                </ul>
+                <ul class="flex flex-col  pt-5 p-4 px-4 mt-3 bg-[#233876]  rounded-lg transition-all gap-2 h-[230px] cursor-pointer">
+                    <li class="flex justify-between">
+                        <div class="w-fit h-fit flex rounded-lg bg-[#FCD9BD] "><h2 class="text-lg font-medium px-2 text-[#771D1D]">Beta</h2></div>
+                        <i class="ri-close-line text-xl text-[#76A9FA] transition-all px-1 hover:bg-[#a4cafe95] hover:text-[#0451ce] rounded-lg"></i>
+                        
+                    </li>
+                    <li>
+                        <p class="text-sm w-fit text-[#76A9FA] font-medium">Preview the new Photo Gallery dashboard navigation! You can turn the new navigation off for a limited time in your profile.</p>
+                    </li>
+                    <li>
+                        <h2 class="text-sm w-fit text-[#76A9FA] font-medium underline underline-offset-4 hover:text-[#a4cafe] ">Visit for More content !</h2>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+
+
+        </nav>
+        <!-- Hero Section  -->
+        <div class="hero w-full h-[100vh] bg-gray-300 relative overflow-hidden" style="--url:url('./assests/bg.jpg'); --position:center;" >
+            <!-- Round-image -->
+        </div>
+
+        <div class="gallery-img w-full px-3 relative">
+
+            <div class="img columns-[220px] py-3">
+                <!-- Galery Images  -->
+                
+                    
+                      <!-- <div class="card-front overflow-hidden py-2 ">
+                        <img src="${item.url}" alt="image-${
+                    i + 1
+                  }"class="w-full h-full object-cover flex rounded-xl">
+                      </div>
+                      <div class="card-back">
+                        <p>This is the details text shown at the back of the image when clicked.</p>
+                      </div> -->
+                    
+            </div>
+            
+            
+            <div class="img-description hide ">
+                <div class=" box  "> 
+                <h1 id="title"  class="text-white  ">Pokemon</h1>
+                <p id="description" class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi tempora, unde in eos dolor suscipit est beatae, nobis error quae odit fugit, amet magni ducimus? Laboriosam aliquid dolorum repellendus nostrum fugiat asperiores, ducimus facere iste consequatur esse obcaecati nulla enim delectus architecto pariatur quasi quas.</p>
+                <button onclick="hidedis()" class="border border-1 border-white text-white">Close</button>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

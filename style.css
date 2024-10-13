@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+  background: #eca2a1;
+background: linear-gradient(153deg, rgba(236,162,161,0.6) 0%, rgba(237,145,112,0.6) 23%, rgba(255,154,95,0.6) 43%, rgba(255,95,115,0.6) 100%);
+width: 100%;
+height: 100%;
+font-family: Poppins;
+user-select: none;
+}
+.hero {
+  background-image: var(--url)  ;
+  background-position: var(--position) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+:root {
+  --speed: 15.6s;
+}
+.slider-img {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autorun var(--speed) linear infinite;
+}
+.slider-img .list {
+    width: 150px;
+    height: 250px;
+  transform: rotateY(calc((var(--pos) - 1) * (360 / var(--qty)) * 1deg))
+    translateZ(250px);
+  transition: all 0.5s ease-in-out;
+  filter: brightness(1.2);
+  filter: contrast(1);
+}
+@media (min-width: 1024px) {
+  .slider-img .list {
+    width: 200px;
+    height: 250px;
+    transform: rotateY(calc((var(--pos) - 1) * (360 / var(--qty)) * 1deg))
+      translateZ(450px);
+  }
+}
+@keyframes autorun {
+  from {
+    transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+  }
+}
+.gallery-img{
+background: linear-gradient(153deg, rgba(236,162,161,0.6) 0%, rgba(237,145,112,0.6) 23%, rgba(255,154,95,0.6) 43%, rgba(255,95,115,0.6) 100%);
+
+    /* background: linear-gradient(328deg, rgba(140,0,106,1) 0%, rgba(81,9,121,1) 39%, rgba(96,36,196,1) 73%, rgba(50,39,231,1) 89%, rgba(0,148,255,1) 100%);  */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .img{
+    width: 100%;
+    transform-origin: left;
+    /* columns: 220px; */
+  }
+  .active{
+  transform:rotatey(20deg);
+
+  }
+  /* .img-description{
+    top: 0;
+    right: 0;
+  } */
+  .img-description .box{
+    max-width: 40ch;
+    display: flex;
+    margin-left: -50ch;
+    z-index: 2;
+    position: relative;
+    flex-direction: column;
+    gap: 20px;
+    transform: perspective(40cm) rotateY(-10deg);
+    transform-origin: right;
+    transition: transform 200ms;
+  }
+  .hide{
+    overflow-x: hidden;
+    transform: translateX(50vw);
+    transition: transform 0ms;
+  }
+
+  /* Navbar */
+  .morf{
+   
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.601);
+    }
+    .morf{
+        backdrop-filter: blur(8px);
+    }
+    /* .cc{
+        position: absolute;
+        top: 50%; 
+        left: 10%;
+        transform: translate(-50%,-50%);
+    } */
+    
+    .activeNav {
+        position: absolute;
+        top:0;
+        left: 100%;
+        transition: 100s ease-in-out;
+    }
+    
+    
+
+
+    /* /// */
+    .card {
+      width: 300px;
+      height: 200px;
+      perspective: 1000px; /* Adds 3D perspective */
+    }
+    
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+      transform-style: preserve-3d; /* Ensures both sides are rendered in 3D */
+    }
+    
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden; /* Ensures the back is hidden when not rotated */
+    }
+    
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image fits perfectly */
+    }
+    
+    .card-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #4e73df;
+      color: white;
+      transform: rotateY(180deg); /* Rotates the back initially so it's hidden */
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* The active class will trigger the rotation */
+    .card.active .card-inner {
+      transform: rotateY(180deg); /* Flips the card */
+    }
