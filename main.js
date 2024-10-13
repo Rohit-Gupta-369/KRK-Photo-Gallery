@@ -1,6 +1,6 @@
 
 let tabs = document.getElementById("tabs");
-let tabs_array = ["Pokemon","Marvel","Transformer","Anime",]
+let tabs_array = ["Pokemon", "Marvel", "Transformer", "Anime", "Doremon"];
 let rannum  = []
 let imageIcon = ["image-line","image-2-line","image-fill","image-2-fill"]
 let icon_image = [""];
