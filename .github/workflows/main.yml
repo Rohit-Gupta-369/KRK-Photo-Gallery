@@ -14,12 +14,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Debugging - Print Vercel environment variables
-      - name: Print Vercel environment variables
-        run: |
-          echo "VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}"
-          echo "VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}"
-
       # Step 3: Deploy to Vercel
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
