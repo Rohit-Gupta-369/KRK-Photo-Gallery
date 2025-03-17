@@ -24,8 +24,8 @@ jobs:
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}  # Vercel token
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Vercel Organization ID
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # Vercel Project ID
+          vercel-token: W39rqcDHvkeTxMkdi6QjFSXx  # Vercel token
+          vercel-org-id: rohit-gupta-369  # Vercel Organization ID
+          vercel-project-id: prj_qNhejIOyxvQAD0igbM1JmXHU5woO  # Vercel Project ID
           github-comment: true
           github-deployment: false
