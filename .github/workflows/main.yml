@@ -3,23 +3,22 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main  # Trigger the workflow on push to the main branch
+      - main  
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+    runs-on: ubuntu-latest  
 
     steps:
-      # Step 1: Checkout the repository
+      
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 3: Deploy to Vercel
+     
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         with:
-          vercel-token: W39rqcDHvkeTxMkdi6QjFSXx  # Vercel token
-          vercel-org-id: SXpTsVA0fzLkEGPJ8IRsQmCu  # Vercel Organization ID
-          vercel-project-id: prj_qNhejIOyxvQAD0igbM1JmXHU5woO  # Vercel Project ID
-          github-comment: true
-          github-deployment: false
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  
+          
