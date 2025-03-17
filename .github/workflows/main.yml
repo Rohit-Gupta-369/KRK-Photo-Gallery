@@ -19,7 +19,7 @@ jobs:
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: W39rqcDHvkeTxMkdi6QjFSXx  # Vercel token
-          vercel-org-id: rohit-gupta-369  # Vercel Organization ID
+          vercel-org-id: SXpTsVA0fzLkEGPJ8IRsQmCu  # Vercel Organization ID
           vercel-project-id: prj_qNhejIOyxvQAD0igbM1JmXHU5woO  # Vercel Project ID
           github-comment: true
           github-deployment: false
