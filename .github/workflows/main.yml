@@ -27,3 +27,5 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}  # Vercel token
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Vercel Organization ID
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # Vercel Project ID
+          github-comment: true
+          github-deployment: false
